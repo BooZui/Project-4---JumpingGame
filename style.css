@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.canvas {
+  display: none;
+}
+
+.play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 96vh;
+  height: 96vh;
+  transform: translate(-50%, -50%);
+}
+
+#canvas {
+  border: 5px solid #000;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #fac;
+  border-radius: 16px;
+  z-index: 2;
+}
+
+#container img {
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  filter: blur(3px);
+}
+
+#menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background: #00f4;
+  padding-top: 8%;
+  width: 50%;
+  height: 50%;
+  justify-content:flex-start;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 900;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  color: #f5d;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+  border: 4px solid #00f5;
+  border-radius: 16px;
+  cursor: default;
+  z-index: 2;
+}
+
+#shadow {
+  content: "";
+  position: absolute;
+  width: 55%;
+  height: 55%;
+  background-image: linear-gradient(135deg, #00f5, #a0f5, #d0f5);
+  filter: blur(20px);
+  z-index: 1;
+}
+
+.button {
+  display: flex;
+  top: 50%;
+  left: 50%;
+  width: 25%;
+  height: 15%;
+  margin-top: 15%;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: #fac6;
+  border: 4px solid #f835;
+  border-radius: 12px;
+  user-select: none;
+}
+
+.button:hover {
+  background: #f3f6;
+  color: #f00;
+  border: 4px solid #f005;
+}
+
+#control {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: #fff3;
+  border: 1px solid #f00;
+  z-index: 1;
+}
+
+#left {
+  display: none;
+  position: absolute;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: #f001;
+  user-select: none;
+}
+
+#right {
+  display: none;
+  position: absolute;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: #00f1;
+}
+
+#jump {
+  display: none;
+  position: absolute;
+  bottom: 3vh;
+  right: 20px;
+  min-width: 100px;
+  width: calc((100vw - 96vh) / 8);
+  min-height: 100px;
+  background: #ccc7;
+  border: 4px solid #0003;
+  z-index: 100;
+  border-radius: 16px;
+}
+
+img {
+  padding-top: 20px;
+  min-width: 100px;
+  width: calc((100vw - 96vh) / 8);
+}
+
+
+
+@media screen and (max-width: 96vh) {
+  .play {
+    width: 95vw;
+    height: 95vw;
+  }
+}
+
+@media screen and (max-width: 930px) {
+  #jump, #left, #right, #control {
+    display: block;
+  }
+
+  #menu {
+    font-size: 8px;
+  }
+}

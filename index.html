@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Jumping Game</title>
+  </head>
+  <body>
+           
+    <audio autoplay loop="true" controls style="display: none;">
+      <source src="audio/audioPlayer.mpeg" type="audio/mpeg" />
+    </audio>
+
+    <canvas id="canvas" class="play canvas"></canvas>
+
+    <div id="container" class="play">
+      <div id="shadow"></div>
+      <img src="PNG/Background/background.png" alt="" />
+      <div id="menu">
+        HÀNH TRÌNH TÌM SỰ SỐNG
+        <div class="buttonPlay button">Play</div>
+        <div class="audioPlayer button">Audio</div>
+      </div>
+    </div>
+
+    <div id="control" class="canvas">
+      <div id="left"></div>
+      <div id="right"></div>
+      <div id="jump"><img src="PNG/JumpL/jumpl2.png" /></div>
+    </div>
+
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
